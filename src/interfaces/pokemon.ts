@@ -2,7 +2,10 @@ import { Ability } from "./ability"
 import { Type } from "typescript"
 
 export interface Pokemon {
-  abilities: Array<Ability>
+  abilities: {
+    es?: Array<Ability>
+    en: Array<Ability>
+  }
   gif: {
     back?: string
     front?: string,
@@ -26,7 +29,10 @@ export interface Pokemon {
   }
   happiness?: number
   capture_rate: number
-  description?: string
+  description?: {
+    en?: string
+    es?: string
+  }
   generation?: string
   growth_rate?: string
   is_legendary?: boolean
