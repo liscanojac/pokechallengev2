@@ -6,6 +6,8 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
+    <h3>Page: {{ page }}</h3>
+    <h2 @click="nextPage()">NextPage</h2>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
@@ -36,12 +38,19 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { mapActions, mapGetters } from 'vuex';
 
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String,
   },
+  computed: {
+    ...mapGetters('pages', { page: 'getPage' })
+  },
+  methods: {
+    ...mapActions('pages', ['nextPage'])
+  }
 });
 </script>
 
