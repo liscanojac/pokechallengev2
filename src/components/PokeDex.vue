@@ -4,7 +4,8 @@
 
 <script>
 export default {
-  name: "PokeDex"
+  name: "PokeDex",
+  
 }
 </script>
 

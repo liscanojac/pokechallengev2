@@ -8,7 +8,8 @@
     </p>
     <h3>Page: {{ page }}</h3>
     <h2 @click="nextPage()">NextPage</h2>
-    <h3>Installed CLI Plugins</h3>
+    <h3 class="font-pokedex">Installed CLI Plugins</h3>
+    <h3 class="font-pokedex-title">Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
