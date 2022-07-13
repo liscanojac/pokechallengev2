@@ -8,11 +8,21 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { mapActions, mapGetters } from 'vuex';
 
 export default defineComponent({
   name: 'HomeView',
   components: {
     HelloWorld,
   },
+  computed: {
+    ...mapGetters('pages', { page: "getPage" })
+  },
+  methods: {
+    ...mapActions('pokemon', ['fetchPokemon'])
+  },
+  async created() {
+    await this.fetchPokemon(this.page)
+  }
 });
 </script>
