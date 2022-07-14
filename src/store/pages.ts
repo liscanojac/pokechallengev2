@@ -31,7 +31,7 @@ const actions = {
 
 const mutations = {
   setNextPage: (state: PagesState) => {
-    if (state.page < page_limit) {
+    if (state.page < state.totalPages) {
       state.page = state.page + 1
     }
   },
