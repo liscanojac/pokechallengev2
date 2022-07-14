@@ -36,7 +36,7 @@ const mutations = {
     }
   },
   setPrevPage: (state: PagesState) => {
-    if (state.page < 1) {
+    if (state.page > 1) {
       state.page = state.page - 1
     }
   },
