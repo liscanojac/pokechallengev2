@@ -13,7 +13,9 @@ const state = {
       type: 'type',
       ability: 'ability',
       happiness: 'happiness',
-      capture_rate: 'capture rate'
+      capture_rate: 'capture rate',
+      lost: "Are you lost kid? Because this path doesn't exist",
+      home: "home"
     },
     es: {
       pokedex: 'Elige un',
@@ -26,7 +28,9 @@ const state = {
       type: 'tipo',
       ability: 'habilidad',
       happiness: 'felicidad',
-      capture_rate: 'probabilidad de captura'
+      capture_rate: 'probabilidad de captura',
+      lost: "Estás perdido chico? Porque esta ruta no existe",
+      home: "inicio"
     }
   },
   typeNames: {
@@ -82,11 +86,11 @@ type TypeColorsKey = keyof typeof state.typeColors
 
 const getters = {
   getGeneralContent: (state: LanguageSwitchState, ) => (language: string, content: string) => {
-    if (language === "es") {
-      return state.generalContent.es![content as GeneralContentKeyEs]
+    if (language === "es" && state.generalContent.es) {
+      return state.generalContent.es[content as GeneralContentKeyEs]
     }
-    if (language === "en") {
-      return state.generalContent.en![content as GeneralContentKeyEn]
+    if (language === "en" && state.generalContent.en) {
+      return state.generalContent.en[content as GeneralContentKeyEn]
     }
   },
   getTypeNamesTranslation: (state: LanguageSwitchState) => (typeName: string, language: string) => {
