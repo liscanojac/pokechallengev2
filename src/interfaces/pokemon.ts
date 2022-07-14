@@ -11,7 +11,7 @@ export interface Pokemon {
     front?: string,
   },
   height: {
-    in: number
+    ft: number
     cms: number
   },
   id: number
@@ -40,4 +40,4 @@ export interface Pokemon {
   shape?: string
 }
 
-export const number_of_pokemon_without_image_pokeAPI = 21
+export const number_of_pokemon_without_image_pokeAPI = 26

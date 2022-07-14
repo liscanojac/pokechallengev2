@@ -53,7 +53,7 @@ export const apiService = {
         kgs: unitConversion.convertLbsIntoKgs(pokemonFullDetails.weight)
       },
       height: {
-        in: pokemonFullDetails.height,
+        ft: pokemonFullDetails.height,
         cms: unitConversion.convertFtIntoCms(pokemonFullDetails.height)
       }
     } as Pokemon
@@ -116,7 +116,7 @@ export const apiService = {
         kgs: unitConversion.convertLbsIntoKgs(pokemonFullDetails.weight)
       },
       height: {
-        in: pokemonFullDetails.height,
+        ft: pokemonFullDetails.height,
         cms: unitConversion.convertFtIntoCms(pokemonFullDetails.height)
       },
       happiness: fullDescription.base_happiness > 100 ? 100 : fullDescription.base_happiness,
