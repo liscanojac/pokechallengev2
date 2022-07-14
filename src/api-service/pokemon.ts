@@ -54,7 +54,7 @@ export const apiService = {
       },
       height: {
         in: pokemonFullDetails.height,
-        cms: unitConversion.convertInchesIntoCms(pokemonFullDetails.height)
+        cms: unitConversion.convertFtIntoCms(pokemonFullDetails.height)
       }
     } as Pokemon
 
@@ -117,7 +117,7 @@ export const apiService = {
       },
       height: {
         in: pokemonFullDetails.height,
-        cms: unitConversion.convertInchesIntoCms(pokemonFullDetails.height)
+        cms: unitConversion.convertFtIntoCms(pokemonFullDetails.height)
       },
       happiness: fullDescription.base_happiness > 100 ? 100 : fullDescription.base_happiness,
       capture_rate: fullDescription.capture_rate > 100 ? 100 : fullDescription.capture_rate,
