@@ -1,6 +1,7 @@
 import { Commit, createStore } from 'vuex'
 import { pokemon } from './pokemon'
 import { pages } from './pages'
+import { languageSwitch } from './language-switch'
 import { RootState } from '@/interfaces/root-state'
 
 export default createStore({
@@ -26,6 +27,7 @@ export default createStore({
   },
   modules: {
     pokemon,
-    pages
+    pages,
+    languageSwitch
   }
 })
