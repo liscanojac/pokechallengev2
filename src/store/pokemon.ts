@@ -12,7 +12,8 @@ const state = {
 
 const getters = {
   getPokemon: (state: PokemonState) => state.pokemon,
-  getPokemonDetails: (state: PokemonState) => state.pokemonDetails
+  getPokemonDetails: (state: PokemonState) => state.pokemonDetails,
+  getTotalPokemon: (state: PokemonState) => state.totalPokemon
 }
 
 const actions = {
