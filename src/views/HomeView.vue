@@ -1,5 +1,5 @@
 <template>
-  <div class="display flex flex-col justify-center items-center mt-12 px-6">
+  <div class="display flex flex-col justify-center items-center mt-12 px-6 sm:px-16 md:px-24 lg:px-44">
     <PokeDex />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="display flex flex-col justify-center items-center mt-12 px-6">
+  <div class="display flex flex-col justify-center items-center mt-12 px-6 sm:px-16 md:px-24 lg:px-44">
     <div class="w-full bg-emerald-400 rounded-xl p-4">
       <div class="flex justify-center mb-2">
         <div
@@ -15,12 +15,16 @@
       <div class="my-6 flex justify-center">
         <div
           class="flex flex-col items-center w-full bg-white border-4 border-yellow-500 md:w-3/4 rounded-lg shadow-lg ring-2 ring-inset ring-orange-300 p-4">
-          <img src="@/assets/lost.png" alt="lost-img" />
+            <img 
+              src="@/assets/lost.png" 
+              alt="lost-img" 
+              class="rounded-xl" 
+            />
           <router-link 
             :to="{ name: 'Home' }"
             class="bg-yellow-200 border-4 border-yellow-600 rounded-md py-4 px-7 ml-1 mr-2 flex justify-center mt-2 uppercase font-pokedex font-bold"
             :class="[language === 'en' && 'tracking-widest']"
-            >
+          >
             {{ homeBtnLabel }}
           </router-link>
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center mt-12 px-6">
+  <div class="flex flex-col justify-center items-center mt-12 px-6 sm:px-16 md:px-20 lg:px-44">
     <PokemonDetails />
   </div>
 </template>
