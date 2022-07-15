@@ -60,6 +60,15 @@ describe("pages vuex module", () => {
 
     expect(mockCommit).toBeCalledWith("setTotalPages", totalPokemon)
   })
+  
+  test("setTotalPages mutation works correctly", () => {
+
+    const totalPokemon = 20
+
+    pages.mutations.setTotalPages(pages.state, totalPokemon)
+
+    expect(pages.state.totalPages).toEqual(4)
+  })
 
   test("setNextPage mutation works correctly", () => {
 
@@ -68,7 +77,7 @@ describe("pages vuex module", () => {
     expect(pages.state.page).toEqual(2)
   })
   
-  test("setNextPrevPage mutation works correctly", () => {
+  test("setPrevPage mutation works correctly", () => {
 
     pages.mutations.setPrevPage(pages.state)
 
@@ -88,14 +97,6 @@ describe("pages vuex module", () => {
     expect(pages.state.page).toEqual(1)
   })
 
-  test("setTotalPages mutation works correctly", () => {
-
-    const totalPokemon = 20
-
-    pages.mutations.setTotalPages(pages.state, totalPokemon)
-
-    expect(pages.state.totalPages).toEqual(4)
-  })
 
   test("setLastPage mutation works correctly", () => {
 
